@@ -1,4 +1,4 @@
-# phone-circle-locator
+# @philotheephilix/phone-number-circle-locator
 
 Look up Indian mobile phone numbers to find the **telecom circle** (region) and **operator**.
 
@@ -7,7 +7,7 @@ Covers 1,702 four-digit prefixes across all major Indian carriers including Airt
 ## Installation
 
 ```bash
-npm install phone-circle-locator
+npm install @philotheephilix/phone-number-circle-locator
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install phone-circle-locator
 ### JavaScript
 
 ```js
-const { lookup, getCircle, getOperator } = require("phone-circle-locator");
+const { lookup, getCircle, getOperator } = require("@philotheephilix/phone-number-circle-locator");
 
 const result = lookup("+91 9900 123456");
 console.log(result);
@@ -33,7 +33,7 @@ getOperator("9910123456");  // "Airtel"
 ### TypeScript
 
 ```ts
-import { lookup, getCircle, getOperator, LookupResult } from "phone-circle-locator";
+import { lookup, getCircle, getOperator, LookupResult } from "@philotheephilix/phone-number-circle-locator";
 
 const result: LookupResult | null = lookup("+91 9900 123456");
 
