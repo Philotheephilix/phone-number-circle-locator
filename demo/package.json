@@ -1,0 +1,12 @@
+{
+  "name": "india-phone-circle-locator-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo for india-phone-circle-locator",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@philotheephilix/phone-number-circle-locator": "file:.."
+  }
+}

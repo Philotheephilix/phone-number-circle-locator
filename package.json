@@ -1,0 +1,37 @@
+{
+  "name": "phone-circle-locator",
+  "version": "1.0.0",
+  "description": "Look up Indian mobile phone numbers to find the telecom circle and operator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc -p tsconfig.test.json && node dist-test/test/index.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "india",
+    "phone",
+    "mobile",
+    "circle",
+    "operator",
+    "telecom",
+    "lookup",
+    "bsnl",
+    "airtel",
+    "jio",
+    "vodafone"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philix/phone-number-circle-locator.git"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "typescript": "^5.0.0"
+  }
+}
