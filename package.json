@@ -1,6 +1,9 @@
 {
-  "name": "phone-circle-locator",
-  "version": "1.0.0",
+  "name": "@philotheephilix/phone-number-circle-locator",
+  "version": "2.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Look up Indian mobile phone numbers to find the telecom circle and operator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

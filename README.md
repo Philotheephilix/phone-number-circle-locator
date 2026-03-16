@@ -1,13 +1,13 @@
-# @philotheephilix/phone-number-circle-locator
+# phone-circle-locator
 
 Look up Indian mobile phone numbers to find the **telecom circle** (region) and **operator**.
 
-Covers 2,576 four-digit prefixes across all major Indian carriers including Airtel, Vodafone, Idea, BSNL, Jio, Tata Docomo, Aircel, and more.
+Covers 1,702 four-digit prefixes across all major Indian carriers including Airtel, Reliance Jio, Vodafone Idea, and BSNL.
 
 ## Installation
 
 ```bash
-npm install @philotheephilix/phone-number-circle-locator
+npm install phone-circle-locator
 ```
 
 ## Usage
@@ -15,31 +15,31 @@ npm install @philotheephilix/phone-number-circle-locator
 ### JavaScript
 
 ```js
-const { lookup, getCircle, getOperator } = require("@philotheephilix/phone-number-circle-locator");
+const { lookup, getCircle, getOperator } = require("phone-circle-locator");
 
 const result = lookup("+91 9900 123456");
 console.log(result);
 // {
 //   phone: "9900123456",
 //   prefix: "9900",
-//   operator: "AIRTEL",
-//   circle: "KARNATAKA"
+//   operator: "Airtel",
+//   circle: "Karnataka"
 // }
 
-getCircle("9910123456");    // "DELHI"
-getOperator("9910123456");  // "AIRTEL"
+getCircle("9910123456");    // "Delhi"
+getOperator("9910123456");  // "Airtel"
 ```
 
 ### TypeScript
 
 ```ts
-import { lookup, getCircle, getOperator, LookupResult } from "@philotheephilix/phone-number-circle-locator";
+import { lookup, getCircle, getOperator, LookupResult } from "phone-circle-locator";
 
 const result: LookupResult | null = lookup("+91 9900 123456");
 
 if (result) {
-  console.log(result.circle);    // "KARNATAKA"
-  console.log(result.operator);  // "AIRTEL"
+  console.log(result.circle);    // "Karnataka"
+  console.log(result.operator);  // "Airtel"
 }
 ```
 
@@ -68,9 +68,8 @@ interface LookupResult {
 Returns just the telecom circle name, or `null` if not found.
 
 ```js
-getCircle("9900123456");  // "KARNATAKA"
-getCircle("9910123456");  // "DELHI"
-getCircle("9820123456");  // "MUMBAI"
+getCircle("9900123456");  // "Karnataka"
+getCircle("9910123456");  // "Delhi"
 ```
 
 ### `getOperator(phone: string | number): string | null`
@@ -78,8 +77,8 @@ getCircle("9820123456");  // "MUMBAI"
 Returns just the operator name, or `null` if not found.
 
 ```js
-getOperator("9900123456");  // "AIRTEL"
-getOperator("9920123456");  // "VODAFONE"
+getOperator("9900123456");  // "Airtel"
+getOperator("9920123456");  // "Vodafone Idea"
 getOperator("9414098765");  // "BSNL"
 ```
 
@@ -99,26 +98,17 @@ The following phone number formats are all supported:
 
 ## Supported Operators
 
-| Operator | Coverage |
-|---|---|
-| AIRTEL | Pan India |
-| VODAFONE | Pan India |
-| IDEA | Pan India |
-| BSNL | Pan India |
-| RELIANCE | Multiple circles |
-| TATA DOCOMO | Multiple circles |
-| AIRCEL | Multiple circles |
-| MTNL | Delhi, Mumbai |
-| UNINOR | Multiple circles |
-| MTS | Multiple circles |
-| LOOP MOBILE | Mumbai |
-| VIDEOCON | Multiple circles |
+| Operator |
+|---|
+| Airtel |
+| Reliance Jio |
+| Vodafone Idea |
+| BSNL |
+| Aircel |
 
 ## Telecom Circles
 
-The following circles are covered:
-
-Andhra Pradesh, Assam, Bihar & Jharkhand, Chennai, Delhi, Gujarat, Haryana, Himachal Pradesh, Jammu & Kashmir, Karnataka, Kerala, Kolkata, Madhya Pradesh & Chhatisgarh, Maharashtra, Mumbai, North East, Odisha, Punjab, Rajasthan, Tamilnadu, Uttar Pradesh (E), Uttar Pradesh (W) & Uttarakhand, West Bengal
+Andhra Pradesh, Assam, Bihar & Jharkhand, Delhi, Gujarat, Haryana, Himachal Pradesh, Jammu & Kashmir, Karnataka, Kerala, Madhya Pradesh & Chhattisgarh, Maharashtra & Goa, North East, Odisha, Punjab, Rajasthan, Tamil Nadu, UP East, UP West & Uttarakhand, Uttar Pradesh, West Bengal
 
 ## Development
 
@@ -135,7 +125,7 @@ npm test
 
 ## Data Source
 
-Phone prefix data sourced from [IndiaMobileNumbers](https://github.com/BaseMax/IndiaMobileNumbers).
+Phone prefix data sourced from [in-mob-prefix](https://github.com/hstsethi/in-mob-prefix) by [@hstsethi](https://github.com/hstsethi).
 
 ## License
 
